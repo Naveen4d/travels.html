@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNtoursandtravels-bookyour tour with exciting offers</title>
+    <style>
+        body {
+            background-color: #f0f0f0; 
+            color: #333; 
+            font-family: 'calibra', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #d9f139; 
+            color: #fff; 
+            padding: 10px;
+            text-align: center;
+        }
+        footer{
+            background-color: #053047; 
+            color: #fff; 
+            padding: 10px;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 100px; 
+
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            font: white;
+        }
+
+        nav li {
+            margin-right: 20px;
+            
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        .card {
+            border: 10px solid #3c26b7;
+            background-color: rgb(173, 158, 173);
+            border-radius: 15px;
+            padding: 15px;
+            margin: 20px;
+            text-align: center;
+            img {
+            width: 400px; 
+            height: 250px; 
+
+        }
+        .image-container {
+            display: flex; 
+            justify-content: space-between; 
+        }
+
+        .image-container img {
+            width: 48%; 
+            max-width: 100%; 
+            height: auto; 
+        }
+    }
+    
+        .image-container {
+            white-space: nowrap; 
+            border: 5px;
+            font-size: 5; 
+        }
+
+        .image-container img {
+            width: 20%; 
+            max-width: 100%; 
+            height: auto; 
+            display: inline-block;
+            vertical-align: top; 
+            margin: 1; 
+            
+
+        }
+    
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer i {
+            font-size: 20px;
+        }
+        
+        
+        
+    </style>
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <img src="data:image/png;base64,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" alt="Logo">
+            <ul>
+                <li><a href="https://www.tourtravelworld.com/travel-agents/india/hyderabad_tour-operator.htm">Home</a></li>
+                <li><a href="https://www.manishtoursandtravels.com/">About</a></li>
+                <li><a href="https://imadtravel.com/">Services</a></li>
+                <li><a href="https://imadtravel.com/">Contact</a></li>
+            </ul>
+            <form action="#" method="get">
+                <input type="text" name="search" placeholder="Search">
+                <button type="Submit">Search</button>
+            </form>
+        
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmDc86csDBXp7Ve_fjblYn173gwMoOD5M1Vw&usqp=CAU" alt="Login">
+            
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <div class="card">
+            <h1>WELCOME TO DN Tours and Travels</h1>
+            <h2>Our services</h2>
+            <h3>International Holiday Packages</h3>
+            <p>Whether it’s your first international trip or you have travelled abroad multiple times, planning a holiday to a distant land is always a special feeling. Our international holiday packages are well-made and hold a high reputation among customers who have been travelling with us. Here, take a look at our top international holiday packages.</p>
+            <img src="https://www.ghumindiaghum.com/blog/wp-content/uploads/2022/09/best-travel-agency.jpg" alt="image1">
+            <h4>Budget-Friendly Destinations</h4>
+            <img src="https://www.wishfin.com/blog/wp-content/uploads/2016/05/Budget-Friendly-Travel-Destinations-in-India.png" alt="image2">
+            <img src="https://indiachalk.com/wp-content/uploads/2021/08/Copy-of-Budget-friendly-art-holidays-1.jpg" alt="image3">
+           <h5>Country Level spouncers</h5>
+            <img src="https://images.moneycontrol.com/static-mcnews/2021/12/Travellers-illustration-by-Sundeep-Khanna.jpg?impolicy=website&width=770&height=431" alt="image4">
+        
+        </div>
+
+        <div class="card">
+            <h2>India & Around Holiday Packages</h2>
+            <p>Travelling abroad for a holiday is a great thing but there isn’t anything that beats the diversity of landscapes and cultures in India. We inspire local travellers to travel more in India, as our India holiday packages acquaint travellers with the incredible beauty of the country. Take a look at top selling holiday packages in India.</p>
+            <img src="https://www.thomascook.in/images/home-page-banners/2024/jan/Kerala-Small-Tiles.jpg" alt="Image 2">
+            <p>Kerala<br>
+                12499<br>
+                starting price
+            </p>
+            <img src="https://www.thomascook.in/images/home-page-banners/2024/jan/Himachal-Small-Tiles.jpg" alt="image3">
+            <p>Himachal<br>
+                17599<br>
+                starting price
+            </p>
+            <img src="https://www.hlimg.com/images/stories/738X538/top-north-india-tour-packages-with-price_1462887019m.jpg" alt="image">
+        </div>
+
+        <div class="card">
+            <h2>Honeymoon Holiday Packages</h2>
+            <p>Whether you are planning your honeymoon in scenic Kashmir or picturesque Switzerland, DN tours India’s honeymoon packages are tailor-made for couples who are looking to escape into natural beauty to let off steam.</p>
+            <img src="https://cdn.experienceandamans.com/images/andaman-honeymoon-packages.jpeg" alt="Image 2">
+            <img src="https://i.pinimg.com/originals/38/44/2e/38442e63f6fc388e498b46875ed4a2ba.jpg" alt="image">
+            <img src="https://ctiaholidays.com/wp-content/uploads/GOAH.png" alt="image6">
+        </div>
+
+        <div class="card">
+            <h2>our special tours</h2>
+            <p>Watch the beauty of India and the World through a different lens! Begin your next adventure now only with DN tours Special Tour Packages.
+
+                The DN Special Tour Packages are based on various themes like Air Inclusive Tour Packages, Wildlife Safaris, Veg Special tours, Spiritual Journeys, Bike Trips and Trekking Tour Packages.<br>
+                 Enjoy the handcrafted tour packages covering various themes. Whether exploring India on Bike Trips interests you or getting one with the beauty of nature with Trekking Tour Packages,<br>
+                 Whether you want to enjoy the thrill of Wildlife Safaris or find your inner peace through the Spiritual Journeys, Whether you want to spend a hassle free holiday with the Air Inclusive <br>
+                 Tour Packages or want the comfort of special food requirement through the Veg Special tours, we have got you covered. Simply select your preferred holiday through the wide range of options<br>
+                  available and set out onto your next holiday.
+                </p>
+            <img src="https://holycitytravels.in/ppc/varanasi-gaya-ayodhya/images/banner-new.jpg" alt="Image 2">
+            <img src="https://wp.hindi.scoopwhoop.com/wp-content/uploads/2018/11/5bee8d3f19867e7cedfbd4d5_4973bffa-27cc-46dc-a81d-2ad6ff9c935d.jpg" alt="image6">
+            <img src="https://www.southindiatoursandtravels.com/SittPhotos/Tamilnadu/Ooty/Ooty-train.jpg" alt="image5">
+        </div>
+
+       
+        
+        <h1>FOREX SERVICES</h1>
+
+        <div class="image-container">
+            <img src="data:image/jpeg;base64,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" alt="foreign exchange1">
+            <img src="https://www.orientexchange.in/img/practicecard1.png" alt="forex card reload">
+            <img src="https://digitalindiaportal.in/wp-content/uploads/2018/07/Sell-Currency.png" alt="foregin exchange">
+            <img src="https://www.goodreturns.in/img/2021/11/abn-money-transfer-1636359779.jpg" alt="send money to abroad">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvwkMj5DzfPFe9U8ldT7sFcXndCasjtuxNFg&usqp=CAU" alt="send money to india">
+        </div>
+
+        <h1>WHY only DN travels</h1>
+
+        <div class="image-container">
+            <img src="data:image/png;base64,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" alt="trusted advisor">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music18/v4/6e/0e/33/6e0e3387-4c2c-bb89-8259-9c635909178a/cover.jpg/1200x1200bf-60.jpg" alt="listining">
+            <img src="https://www.tamiekasmithphotography.com/uploads/2/8/7/7/28776869/s324903124594354757_p184_i2_w1280.png" alt="memorable">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVCkxv9uBrmbY_nZ3uqbRstiudcJ123f3dZQTox8TWX1MER92LDacLuoFvtjoAKWW0KLs&usqp=CAU" alt="easy">
+            <img src="https://content.jdmagicbox.com/comp/thane/n2/022pxx22.xx22.180205180314.f1n2/catalogue/mee-time-handcrafted-holidays-thane-west-thane-tour-packages-hp761n96k3-250.jpg" alt="holiday">
+        </div>
+        <p><h1>Your Trusted Advisor</h1>
+            We'll answer your every question. Our experienced travel experts and real-time on field know-how gives us this advantage.
+            <h2>Your Trusted Advisor</h2>
+            Your holiday, your terms. We'll fill in the blanks to plan the perfect trip in the blink of an eye.
+            <h3>Memorable Experiences</h3>
+            Do everything or do nothing. Either way, your holiday will be nothing less than extraordinary.
+            <h4>Easy to travel</h4>
+            Travel smooth and stress-free, That's how easy we make it because that's how your holiday should be.
+            <h5>Handcrafted Holidays</h5>
+            We interact with our loyal customers to co- create unique experiences that will take your holiday to the next level.
+            </p>
+
+       
+        <div class="card">
+            <h2>Tours and Travel Agency – DN TRAVELS in India</h2>
+            <p>“Travel is the only thing you buy that makes you richer”. We completely swear by this and believe in fulfilling travel dreams that make you invariably rich by the day. We have been selling beautiful experiences for years through our state-of-the-art designed holiday packages and other essential travel services. We inspire our customers to live a rich life, full of unforgettable travel experiences.
+
+                <p>Our mission is not just to be a travel agency which helps you book a holiday; we want to be your travel partner who would go an extra mile to help you choose an ideal destination and learn more about the place you have been dreaming to visit. Since holidays are more about personal choices and interests, we bring to you customizable tour packages as well. We give you the prerogative to pick and choose anything that matches your interest. No matter how many travel experiences we sell every day, we ensure that you are the protagonist of your own travel story.</p>
+                
+               <P> It’s not the bragging game but we truly are the all-rounders of holidays and we can vouch for that. Travel anywhere in the world, your flight, hotel booking, sightseeing and most importantly your comfort is our responsibility. Our tour packages in India will acquaint you with serene backwaters of Kerala, mystic hills of Ladakh, the grandeur of Udaipur, untouched beauty of North East and carefree vibes of Goa. Along with tailor-made packages for all the renowned destinations in India, we have tour packages for intrepid travellers who love walking the offbeat paths. With us, you can explore the lush green and refreshing beauty of Coorg, quaint hills and meadows of Dalhousie, the offbeat hill town of Tawang and the scenic hills and valleys of Kalimpong, West Bengal. It goes without saying that these are just a few pearls in our holiday treasure box.<br></p>
+                
+                With us your honeymoon and long weekend holidays are also sorted. We understand that honeymoon is a one-time and long lasting affair. With honeymoon begins a beautiful journey togetherness and eternal love. It will always be those special moments that you cherish for a lifetime. Our honeymoon packages will enhance your special moments with a perfect background setting, impressive experiences and comfortable accommodation. We understand how important your long weekends are and thus have ingenious long weekend holidays for people who are looking to escape the daily grind and let off steam.
+                
+                <h1>DN Travel Services</h1>
+                To ensure that you have a fulfilled holiday and wholesome experiences, all our holiday services are at your beck and call. On your international holiday,
+                 we ensure that you are well-equipped with foreign exchange and travel insurance. We are the pioneers of foreign exchange in India and booking forex online is
+                  simple and convenient with us. We also provide forex and travel insurance services for students travelling abroad for study. Whether it’s booking flights or
+                   hotels for your travel, Dn travels offers everything under one umbrella. We also have cruise holidays for people who are looking for comfort and affordable luxury.
+                
+               <p> We swear by the theory of keeping our customers happy and hence keep throwing surprises at them in the form irresistible discounts and offers from time to time.
+                 We offer best discounts on our best-selling tour packages to customers who choose our impressive services time and again. Let’s remind you once again that we don’t aim
+                  to be your tour and travel agents; we strive to be your holiday partners forever.</p>
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMHbh4pHe0DSdgn62ewWfFhitxunSwgUYSq51PX=w1080-h608-p-no-v0" alt="airline">
+        </div>
+
+        
+
+        <p>Additional information about the website.</p>
+    </div>
+
+    <footer>
+        <p>Contact us at: DNtoursandtravels@google.com</p>
+        <p>Call us:+91 9959933170</p>
+        <p>(Toll free num):099599 33170</p>
+        <p>
+            Follow us on:facebook,twitter,instagram,linkedin,pinterest
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://in.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://in.pinterest.com/" target="_blank"><i class="fab fa-pinterest"></i></a>
+        </p>
+    </footer>
+
+</body>
+</html>
